@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF737543-50D1-40C2-A394-32323EB86778}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineOrdering.Common</RootNamespace>
+    <AssemblyName>OnlineOrdering.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClass\BaseControl.cs" />
+    <Compile Include="BaseClass\BasePage.cs" />
+    <Compile Include="BaseClass\BaseTestScript.cs" />
+    <Compile Include="BaseClass\BaseValues.cs" />
+    <Compile Include="Constants\BaseConstants.cs" />
+    <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\CheckBox.cs" />
+    <Compile Include="Controls\DropdownList.cs" />
+    <Compile Include="Controls\DropdownMenu.cs" />
+    <Compile Include="Controls\Grid.cs" />
+    <Compile Include="Controls\IControls.cs" />
+    <Compile Include="Controls\Label.cs" />
+    <Compile Include="Controls\Link.cs" />
+    <Compile Include="Controls\Textbox.cs" />
+    <Compile Include="Enums\AttributeType.cs" />
+    <Compile Include="Enums\BrowserType.cs" />
+    <Compile Include="Enums\ConfirmType.cs" />
+    <Compile Include="Enums\FindType.cs" />
+    <Compile Include="InitialSetting.cs" />
+    <Compile Include="Pages\ToolbarMenuSection.cs" />
+    <Compile Include="Pages\NormalPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\AssertHelper.cs" />
+    <Compile Include="Utils\CommonFuncs.cs" />
+    <Compile Include="Utils\CommonHelper.cs" />
+    <Compile Include="Utils\ExcelFactory.cs" />
+    <Compile Include="Utils\ExtentReportsHelper.cs" />
+    <Compile Include="Utils\FindElementHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="extent-config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Castle.Core">
+      <Version>3.3.3</Version>
+    </PackageReference>
+    <PackageReference Include="ExtentReports">
+      <Version>3.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="LinqToExcel">
+      <Version>1.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Bson">
+      <Version>2.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Driver.Core">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>9.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="NPOI">
+      <Version>2.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit">
+      <Version>3.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter">
+      <Version>3.11.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Chrome.WebDriver">
+      <Version>2.43.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Firefox.WebDriver">
+      <Version>0.22.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Support">
+      <Version>3.141.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver.IEDriver">
+      <Version>3.141.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
